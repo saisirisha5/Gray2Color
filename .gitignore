@@ -2,11 +2,6 @@
 .idea/
 *.iml
 
-# Ignore model files 
-models/
-models/colorization_*.*
-models/pts_in_hull.npy
-
 # Ignore unnecessary system files
 .DS_Store
 Thumbs.db
