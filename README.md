@@ -1,3 +1,12 @@
+---
+title: 🌈Gray2Color
+sdk: docker
+emoji: ⚡
+colorFrom: indigo
+colorTo: purple
+app_file: app.py
+pinned: false
+---
 # 🎨 Gray2Color – Black & White Image Colorization
 
 Gray2Color is a deep learning-based tool that colorizes black and white images using OpenCV and a pre-trained CNN model.  
@@ -43,13 +52,10 @@ python BWColor.py --image images/sample_bw_image.jpg
 ## 🔍Results
 
 | Grayscale Input | Colorized Output |
-|-----------------|------------------|
-| ![bw](./static/GS.png) | ![color](./static/CS.png) |
+|-----------------|------------------| |
 
 ---
 
 ## 🤝 Credits
 Model and resources by Richard Zhang et al.
 GitHub: [richzhang/colorization](http://github.com/richzhang/colorization)
-
-
