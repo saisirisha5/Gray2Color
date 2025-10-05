@@ -15,7 +15,7 @@ uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file:
     # Resize to save memory
-    MAX_SIZE = (1024, 1024)
+    MAX_SIZE = (512, 512)
     image = Image.open(uploaded_file).convert("RGB")
     image.thumbnail(MAX_SIZE)
     
