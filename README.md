@@ -45,17 +45,18 @@ Gray2Color is an AI-powered tool that colorizes black and white images, bringing
 ```bash
 git clone https://github.com/<your-username>/Gray2Color.git
 cd Gray2Color
+```
 
 2. Run the app:
 
 ```bash
 streamlit run app.py
+```
 
 3.Open http://localhost:8501 in your browser.
 
 4.Upload a black & white image, click Colorize, and download the output.
 
-## 🔍Results
 
 ## 🤝 Credits
 Model and resources by Richard Zhang et al.
