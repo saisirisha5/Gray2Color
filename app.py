@@ -12,7 +12,7 @@ st.write("Upload a black & white photo and let AI bring it to life with colors.ð
 
 # File uploader
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
-
+st.write("Please upload small sized images ")
 if uploaded_file:
     # Resize to save memory
     MAX_SIZE = (512, 512)

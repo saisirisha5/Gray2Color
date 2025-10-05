@@ -7,55 +7,57 @@ colorTo: purple
 app_file: app.py
 pinned: false
 ---
-# 🎨 Gray2Color – Black & White Image Colorization
 
-Gray2Color is a deep learning-based tool that colorizes black and white images using OpenCV and a pre-trained CNN model.  
-This project uses a pre-trained Caffe model and color cluster centers to generate realistic colorizations.
+🎨 **See AI bring black & white photos to life!**  
+[Try Gray2Color live →](https://saisirisha5-gray2color.hf.space/)
+
+# 🌈 Gray2Color – Black & White Image Colorization
+
+Gray2Color is an AI-powered tool that colorizes black and white images, bringing them to life with realistic colors using a pre-trained neural network. Users can upload any grayscale image, see the colorized result instantly, and download it. The app is built with **Streamlit** and deployed via **Docker** for Hugging Face Spaces.
 
 ---
 
-## 🧠 How It Works
-- Loads a pre-trained model (colorization_release_v2.caffemodel)
+## 🧠 Features
 
-- Uses cluster centers (pts_in_hull.npy) to restore color information
-
-- Converts the input image from grayscale to LAB color space
-
-- Infers AB channels using the model and reconstructs the final image
+- Upload black & white images (jpg, jpeg, png)  
+- AI-based colorization using a pre-trained model  
+- Instant preview of colorized image  
+- Download the colorized image  
+- Modern, responsive Streamlit UI
 
 ---
 
 ## ⚙️ Requirements
 
-- Python 3.7+
-- OpenCV
-- NumPy
+- Python 3.7+  
+- Streamlit  
+- Pillow  
+- NumPy  
+- OpenCV  
+- Torch (if your `colorizer` uses it)
 
 ---
 
-## 🚀 How to Run
+## 🚀 How to Run Locally
 
-1) Install dependencies using pip:
-
-```bash
-pip install opencv-python numpy
-```
-
-2) Place your black and white image inside the images/ folder (You can use the images already in the repository also), then run:
+1. Clone the repository:
 
 ```bash
-python BWColor.py --image images/sample_bw_image.jpg
-```
-✅The original and colorized images will be displayed in separate windows.
+git clone https://github.com/<your-username>/Gray2Color.git
+cd Gray2Color
 
----
+3. Run the app
+```bash
+streamlit run app.py
+
+4.Open http://localhost:8501 in your browser.
+
+Upload a black & white image, click Colorize, and download the output.
+
 ## 🔍Results
-
-| Grayscale Input | Colorized Output |
-|-----------------|------------------| |
-
----
 
 ## 🤝 Credits
 Model and resources by Richard Zhang et al.
 GitHub: [richzhang/colorization](http://github.com/richzhang/colorization)
+
+## Developed by [Sai Sirisha Devi Prabhala](https://github.com/saisirisha5) 
