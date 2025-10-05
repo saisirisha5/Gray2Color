@@ -1,14 +1,28 @@
 FROM python:3.10-slim
 
-WORKDIR /app
-COPY . /app
+# Set working directory
+WORKDIR /gray2Color
 
+# Copy project files
+COPY . /gray2Color
+
+# Install dependencies
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Set Streamlit config directory
-ENV STREAMLIT_HOME=/app/.streamlit
+# Make sure .streamlit folder exists and is writable
+RUN mkdir -p /gray2Color/.streamlit
 
+# Copy Streamlit config file
+COPY .streamlit/config.toml /gray2Color/.streamlit/config.toml
+
+# Set environment variables to force Streamlit to use writable dirs
+ENV STREAMLIT_HOME=/gray2Color/.streamlit
+ENV STREAMLIT_CONFIG_DIR=/gray2Color/.streamlit
+ENV HOME=/gray2Color
+
+# Expose Streamlit port
 EXPOSE 7860
 
-CMD ["streamlit", "run", "app.py", "--server.port=7860", "--server.headless=true"]
+# Start the Streamlit app
+CMD ["streamlit", "run", "app.py", "--server.port=7860", "--server.address=0.0.0.0", "--server.headless=true"]
