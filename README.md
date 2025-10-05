@@ -8,10 +8,9 @@ app_file: app.py
 pinned: false
 --- -->
 
-🎨 **See AI bring black & white photos to life!**  
-[Try Gray2Color live →](https://saisirisha5-gray2color.hf.space/)
+[✨Try Gray2Color live here!✨](https://saisirisha5-gray2color.hf.space/)
 
-# 🌈 Gray2Color – Black & White Image Colorization
+# 🌈 Gray2Color – See AI bring black & white photos to life! 
 
 Gray2Color is an AI-powered tool that colorizes black and white images, bringing them to life with realistic colors using a pre-trained neural network. Users can upload any grayscale image, see the colorized result instantly, and download it. The app is built with **Streamlit** and deployed via **Docker** for Hugging Face Spaces.
 
@@ -34,7 +33,6 @@ Gray2Color is an AI-powered tool that colorizes black and white images, bringing
 - Pillow  
 - NumPy  
 - OpenCV  
-- Torch (if your `colorizer` uses it)
 
 ---
 
@@ -53,13 +51,14 @@ cd Gray2Color
 streamlit run app.py
 ```
 
-3.Open http://localhost:8501 in your browser.
+3. Open http://localhost:8501 in your browser.
 
-4.Upload a black & white image, click Colorize, and download the output.
+4. Upload a black & white image, click Colorize, and download the output.
 
 
 ## 🤝 Credits
 Model and resources by Richard Zhang et al.
 GitHub: [richzhang/colorization](http://github.com/richzhang/colorization)
 
-## Developed by [Sai Sirisha Devi Prabhala](https://github.com/saisirisha5) 
+---
+**Developed by [Sai Sirisha Devi Prabhala](https://github.com/saisirisha5) with🌈✨** 
