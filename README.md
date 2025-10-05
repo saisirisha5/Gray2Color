@@ -1,4 +1,4 @@
----
+<!-- ---
 title: 🌈Gray2Color
 sdk: docker
 emoji: ⚡
@@ -6,7 +6,7 @@ colorFrom: indigo
 colorTo: purple
 app_file: app.py
 pinned: false
----
+--- -->
 
 🎨 **See AI bring black & white photos to life!**  
 [Try Gray2Color live →](https://saisirisha5-gray2color.hf.space/)
@@ -46,13 +46,14 @@ Gray2Color is an AI-powered tool that colorizes black and white images, bringing
 git clone https://github.com/<your-username>/Gray2Color.git
 cd Gray2Color
 
-3. Run the app
+2. Run the app:
+
 ```bash
 streamlit run app.py
 
-4.Open http://localhost:8501 in your browser.
+3.Open http://localhost:8501 in your browser.
 
-Upload a black & white image, click Colorize, and download the output.
+4.Upload a black & white image, click Colorize, and download the output.
 
 ## 🔍Results
 
