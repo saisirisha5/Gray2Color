@@ -10,13 +10,13 @@ COPY . /gray2Color
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Make sure .streamlit folder exists and is writable
-RUN mkdir -p /gray2Color/.streamlit
+# Create and fix permissions for Streamlit folder
+RUN mkdir -p /gray2Color/.streamlit && chmod -R 777 /gray2Color/.streamlit
 
 # Copy Streamlit config file
 COPY .streamlit/config.toml /gray2Color/.streamlit/config.toml
 
-# Set environment variables to force Streamlit to use writable dirs
+# Environment variables for Streamlit
 ENV STREAMLIT_HOME=/gray2Color/.streamlit
 ENV STREAMLIT_CONFIG_DIR=/gray2Color/.streamlit
 ENV HOME=/gray2Color
@@ -24,5 +24,5 @@ ENV HOME=/gray2Color
 # Expose Streamlit port
 EXPOSE 7860
 
-# Start the Streamlit app
+# Start Streamlit app
 CMD ["streamlit", "run", "app.py", "--server.port=7860", "--server.address=0.0.0.0", "--server.headless=true"]
